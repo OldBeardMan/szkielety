@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs: Szkielety programistyczne w aplikacjach internetowych</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #ffffff;
+            color: #333;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #6c757d;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            border-left: 3px solid #6c757d;
+        }
+
+        .question-number {
+            font-weight: 600;
+            color: #495057;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #212529;
+        }
+
+        .options {
+            list-style: none;
+        }
+
+        .option {
+            padding: 8px 12px;
+            margin: 6px 0;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            background: #f8f9fa;
+        }
+
+        .option.correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+            font-weight: 500;
+        }
+
+        .option.correct::before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .option-letter {
+            font-weight: 600;
+            color: #495057;
+            margin-right: 8px;
+        }
+
+        .multiple-choice {
+            background-color: #fff8e1;
+            border-left-color: #ffc107;
+        }
+
+        .multiple-choice .option.correct {
+            background-color: #e1f5fe;
+            border-color: #b3e5fc;
+            color: #01579b;
+        }
+
+        .stats {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .question {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Szkielety programistyczne w aplikacjach internetowych</h1>
+            <p>Pytania egzaminacyjne z odpowiedziami</p>
+        </div>
+        
+        <div class="content">
+            <div class="question">
+                <div class="question-number">Pytanie 1</div>
+                <div class="question-text">W skład stosu MERN wchodzą następujące technologie:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> Biblioteka REACT</li>
+                    <li class="option correct"><span class="option-letter">b.</span> Baza danych typu NoSQL</li>
+                    <li class="option"><span class="option-letter">c.</span> Szkielet frontendowy Express</li>
+                    <li class="option"><span class="option-letter">d.</span> Platforma Microsoft</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 2</div>
+                <div class="question-text">Wskaż nieprawdziwe stwierdzenie opisujące platformę Node:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> Powstała w celu ułatwienia programowania asynchronicznego</li>
+                    <li class="option"><span class="option-letter">b.</span> Jest środowiskiem wieloplatformowym</li>
+                    <li class="option"><span class="option-letter">c.</span> Możliwe jest używanie synchronicznych wersji funkcji</li>
+                    <li class="option correct"><span class="option-letter">d.</span> Jest domyślnie wielowątkowy</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 3</div>
+                <div class="question-text">Wskaż sformułowanie nieprawidłowe. Plik package.json:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> Można utworzyć „ręcznie"</li>
+                    <li class="option"><span class="option-letter">b.</span> Można utworzyć za pomocą npm init</li>
+                    <li class="option correct"><span class="option-letter">c.</span> Jest narzędziem do automatycznego restartowania programu po wprowadzeniu zmian w kodzie</li>
+                    <li class="option"><span class="option-letter">d.</span> Zawiera informacje o projekcie: wersja, opis, autorzy itd. Oraz o zależnościach jakie zostały wykorzystane do stworzenia projektu</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 4</div>
+                <div class="question-text">Wskaż niepoprawne stwierdzenie:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> async i await wspomagają wykonywanie operacji asynchronicznych</li>
+                    <li class="option correct"><span class="option-letter">b.</span> async i await można dodawać do stałych i zmiennych</li>
+                    <li class="option"><span class="option-letter">c.</span> async informuje JavaScript, że funkcja korzysta z obietnic</li>
+                    <li class="option"><span class="option-letter">d.</span> await jest używane podczas wywołaniu funkcji</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 5</div>
+                <div class="question-text">Wskaż wynik działania kodu: [1, 2, 3].map(x => x*x*x)</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> [1, 4, 6]</li>
+                    <li class="option"><span class="option-letter">b.</span> [1, 4, 9]</li>
+                    <li class="option"><span class="option-letter">c.</span> [3, 6, 9]</li>
+                    <li class="option correct"><span class="option-letter">d.</span> [1, 8, 27]</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 6</div>
+                <div class="question-text">Która z poniższych metod żąda od serwera zaakceptowania danych zawartych w żądaniu modyfikacji istniejącego obiektu identyfikowanego przez URI?</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> GET</li>
+                    <li class="option"><span class="option-letter">b.</span> DELETE</li>
+                    <li class="option"><span class="option-letter">c.</span> POST</li>
+                    <li class="option correct"><span class="option-letter">d.</span> PUT</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 7</div>
+                <div class="question-text">Silniki szablonów, które można użyć w szkielecie Express:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">a.</span> EJS</li>
+                    <li class="option correct"><span class="option-letter">b.</span> Pug</li>
+                    <li class="option correct"><span class="option-letter">c.</span> Handlebars</li>
+                    <li class="option"><span class="option-letter">d.</span> żaden z powyższych</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 8</div>
+                <div class="question-text">Które sformułowania odnośnie bazy danych MongoDB są nieprawdziwe:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> MongoDB to baza nierelacyjna</li>
+                    <li class="option correct"><span class="option-letter">b.</span> MongoDB przechowuje dane w rekordach i tabelach</li>
+                    <li class="option correct"><span class="option-letter">c.</span> dokumenty w kolekcji nie posiadają unikalnych identyfikatorów</li>
+                    <li class="option"><span class="option-letter">d.</span> językiem MongoDB jest JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 9</div>
+                <div class="question-text">Jaka liczba elementów może być zwrócona przez prawidłowy komponent Reacta:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">a.</span> 1</li>
+                    <li class="option"><span class="option-letter">b.</span> 2</li>
+                    <li class="option"><span class="option-letter">c.</span> 3</li>
+                    <li class="option"><span class="option-letter">d.</span> 5</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 10</div>
+                <div class="question-text">Co należy użyć, aby przekazać dane z zewnątrz do komponentu?</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> setState</li>
+                    <li class="option"><span class="option-letter">2.</span> funkcji render z argumentami</li>
+                    <li class="option correct"><span class="option-letter">3.</span> props</li>
+                    <li class="option"><span class="option-letter">4.</span> BrowserRouter</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 11</div>
+                <div class="question-text">Punktem wejścia do aplikacji React jest:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">a.</span> index.js</li>
+                    <li class="option"><span class="option-letter">b.</span> App.js</li>
+                    <li class="option"><span class="option-letter">c.</span> registerServiceWorker.js</li>
+                    <li class="option"><span class="option-letter">d.</span> main.js</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 12</div>
+                <div class="question-text">Tak zwane hooki w React:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">a.</span> występują w komponentach klasowych</li>
+                    <li class="option correct"><span class="option-letter">b.</span> muszą być wywoływane na najwyższym poziomie, nie można ich wywołać wewnątrz zagnieżdżonych funkcji, pętli, warunków</li>
+                    <li class="option"><span class="option-letter">c.</span> wymagają deklaracji konstruktora</li>
+                    <li class="option"><span class="option-letter">d.</span> wymagają użycia słowa kluczowego this w deklaracji lub modyfikacji stanu</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 13</div>
+                <div class="question-text">Jakie są rodzaje komponentów w React:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">1.</span> Stanowe</li>
+                    <li class="option correct"><span class="option-letter">2.</span> Bezstanowe</li>
+                    <li class="option correct"><span class="option-letter">3.</span> Klasowe</li>
+                    <li class="option correct"><span class="option-letter">4.</span> funkcjonalne</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 14</div>
+                <div class="question-text">Wskaż, który z poniższych to szablon ciągu tekstowego:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> {Połowa liczby 20 wynosi ${20 / 2}}</li>
+                    <li class="option"><span class="option-letter">2.</span> 'Połowa liczby 20 wynosi ${20 / 2}'</li>
+                    <li class="option"><span class="option-letter">3.</span> "Połowa liczby 20 wynosi ${20 / 2}"</li>
+                    <li class="option correct"><span class="option-letter">4.</span> `Połowa liczby 20 wynosi ${20 / 2}`</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 15</div>
+                <div class="question-text">Oprogramowanie pośredniczące w Express realizuje następujące zadania:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">1.</span> może wywoływać kolejne funkcje oprogramowania pośredniczącego</li>
+                    <li class="option correct"><span class="option-letter">2.</span> może dokonywać zmian w obiektach żądania i odpowiedzi</li>
+                    <li class="option correct"><span class="option-letter">3.</span> może kończyć cykl żądanie-odpowiedź</li>
+                    <li class="option"><span class="option-letter">4.</span> przekształca kod JavaScript korzystający z najnowszych możliwości języka na kod, który będzie wykonywany w starszych przeglądarkach</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 16</div>
+                <div class="question-text">Wskaż wynik działania kodu: [2, 3, 4].map(x => x * 2)</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> [4, 9, 16]</li>
+                    <li class="option"><span class="option-letter">2.</span> 24</li>
+                    <li class="option"><span class="option-letter">3.</span> 18</li>
+                    <li class="option correct"><span class="option-letter">4.</span> [4, 6, 8]</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 17</div>
+                <div class="question-text">W skład stosu MERN wchodzą następujące technologie:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> MySQL, Elixir, Router, Node</li>
+                    <li class="option"><span class="option-letter">2.</span> MsSQL, Electron, Ruby on Rails, Node</li>
+                    <li class="option"><span class="option-letter">3.</span> Microsoft SQL, Exit, Redux, Node</li>
+                    <li class="option correct"><span class="option-letter">4.</span> MongoDB, Express, React, Node</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 18</div>
+                <div class="question-text">Które sformułowania odnośnie MongoDB są nieprawdziwe?</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> MongoDB to nierelacyjna baza danych</li>
+                    <li class="option"><span class="option-letter">2.</span> językiem MongoDB jest JavaScript</li>
+                    <li class="option"><span class="option-letter">3.</span> MongoDB przechowuje dane w dokumentach i kolekcjach</li>
+                    <li class="option correct"><span class="option-letter">4.</span> dokumenty w kolekcji nie posiadają unikalnych identyfikatorów</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 19</div>
+                <div class="question-text">Wskaż prawidłowe stwierdzenia dotyczące formatu JSON:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> odpowiedź w formacie JSON ma znacznie większą liczbę znaków niż XML i w związku z tym powoduje większy ruch sieciowy i dłuższy czas transferu danych</li>
+                    <li class="option correct"><span class="option-letter">2.</span> lekki, tekstowy, przyjazny format dla języka JavaScript</li>
+                    <li class="option correct"><span class="option-letter">3.</span> obsługuje typy strukturalne object i array</li>
+                    <li class="option"><span class="option-letter">4.</span> nie sprawdza się w opisie i serializacji danych strukturalnych</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 20</div>
+                <div class="question-text">Które z poniższych fragmentów kodu zapisanych w JSX są prawidłowe?</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> return (&lt;div&gt;Pierwszy element&lt;/div&gt;&lt;div&gt;Drugi element&lt;/div&gt;)</li>
+                    <li class="option correct"><span class="option-letter">2.</span> return (&lt;div&gt;&lt;div&gt;Pierwszy element&lt;/div&gt;&lt;div&gt;Drugi element&lt;/div&gt;&lt;/div&gt;)</li>
+                    <li class="option correct"><span class="option-letter">3.</span> return (&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;)</li>
+                    <li class="option"><span class="option-letter">4.</span> return (&lt;button class="btn btn-warning"&gt;Naciśnij&lt;/button&gt;)</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 21</div>
+                <div class="question-text">Wskaż prawidłowe określenie dla REST:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> REST jest protokołem</li>
+                    <li class="option correct"><span class="option-letter">2.</span> API utworzone wg zasad REST nazywane jest RESTful API</li>
+                    <li class="option"><span class="option-letter">3.</span> REST jest standardem</li>
+                    <li class="option correct"><span class="option-letter">4.</span> REST jest zbiorem dobrych praktyk tworzenia architektury rozproszonych aplikacji</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 22</div>
+                <div class="question-text">Wskaż prawdziwe stwierdzenia dotyczące szkieletu Express:</div>
+                <ul class="options">
+                    <li class="option correct"><span class="option-letter">1.</span> Express odchodzi od wbudowanych komponentów na rzecz konfigurowalnej warstwy pośredniczącej</li>
+                    <li class="option correct"><span class="option-letter">2.</span> Express to szkielet działający po stronie serwera</li>
+                    <li class="option correct"><span class="option-letter">3.</span> Express w porównaniu do Node upraszcza proces budowania aplikacji internetowej</li>
+                    <li class="option"><span class="option-letter">4.</span> Mocno obciążone witryny oparte na szkielecie Express cechują się niską wydajnością</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 23</div>
+                <div class="question-text">W instrukcji: import React, { Component } from "react"</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> React jest możliwością nazwaną</li>
+                    <li class="option"><span class="option-letter">2.</span> Component jest domyślną możliwością nazwaną</li>
+                    <li class="option correct"><span class="option-letter">3.</span> React jest domyślną możliwością nazwaną</li>
+                    <li class="option correct"><span class="option-letter">4.</span> Component jest możliwością nazwaną</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 24</div>
+                <div class="question-text">Wskaż polecenie, które uruchomi kod zawarty w pliku hello.js:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> npm hello.js</li>
+                    <li class="option correct"><span class="option-letter">2.</span> node hello</li>
+                    <li class="option"><span class="option-letter">3.</span> npm hello</li>
+                    <li class="option"><span class="option-letter">4.</span> npx hello.js</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Pytanie 27</div>
+                <div class="question-text">Czym jest useState w poniższej konstrukcji: const [ state, setState ] = useState()</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> konstruktorem</li>
+                    <li class="option"><span class="option-letter">2.</span> stanem</li>
+                    <li class="option"><span class="option-letter">3.</span> propsem</li>
+                    <li class="option correct"><span class="option-letter">4.</span> hookiem</li>
+                </ul>
+            </div>
+
+            <div class="question multiple-choice">
+                <div class="question-number">Pytanie 28</div>
+                <div class="question-text">Wskaż cechy Virtual DOM:</div>
+                <ul class="options">
+                    <li class="option"><span class="option-letter">1.</span> bezpośrednio modyfikuje HTML</li>
+                    <li class="option correct"><span class="option-letter">2.</span> szybko się aktualizuje</li>
+                    <li class="option correct"><span class="option-letter">3.</span> tworzy nowy DOM, jeśli zostanie zaktualizowany</li>
+                    <li class="option"><span class="option-letter">4.</span> występuje duże marnotrawstwo pamięci</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>Podsumowanie</h2>
+            <p>Łącznie: 26 pytań | Pytania wielokrotnego wyboru oznaczone żółtym tłem</p>
+            <p>Poprawne odpowiedzi oznaczone zielonym kolorem z ✓</p>
+        </div>
+    </div>
+</body>
+</html>
